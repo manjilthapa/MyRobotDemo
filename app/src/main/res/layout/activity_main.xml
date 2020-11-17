@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <TextView
+    android:id="@+id/tv_room_size_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="24dp"
+    android:text="Size of Room"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+    android:id="@+id/et_min_size"
+    android:layout_width="45dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="min"
+    android:textAlignment="center"
+    android:inputType="number"
+    android:maxLength="1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_room_size_title" />
+
+  <EditText
+    android:id="@+id/et_max_size"
+    android:layout_width="45dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="max"
+    android:textAlignment="center"
+    android:inputType="number"
+    android:maxLength="1"
+    app:layout_constraintStart_toEndOf="@+id/et_min_size"
+    app:layout_constraintTop_toBottomOf="@+id/tv_room_size_title" />
+
+  <TextView
+    android:id="@+id/tv_start_position_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="16dp"
+    android:text="Robot start position"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/et_max_size" />
+
+  <EditText
+    android:id="@+id/et_x_position"
+    android:layout_width="50dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="x"
+    android:inputType="number"
+    android:maxLength="1"
+    android:textAlignment="center"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_start_position_title" />
+
+  <EditText
+    android:id="@+id/et_y_position"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="8dp"
+    android:ems="10"
+    android:hint="y"
+    android:inputType="number"
+    android:textAlignment="center"
+    android:maxLength="1"
+    app:layout_constraintStart_toEndOf="@+id/et_x_position"
+    app:layout_constraintTop_toBottomOf="@+id/tv_start_position_title" />
+
+  <EditText
+    android:id="@+id/et_direction"
+    android:layout_width="80dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:digits="ESWN"
+    android:ems="10"
+    android:hint="Direction"
+    android:textAlignment="center"
+    android:inputType="textPersonName"
+    android:maxLength="1"
+    app:layout_constraintStart_toEndOf="@+id/et_y_position"
+    app:layout_constraintTop_toBottomOf="@+id/tv_start_position_title" />
+
+  <EditText
+    android:id="@+id/et_commands"
+    android:layout_width="0dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="24dp"
+    android:ems="10"
+    android:inputType="textCapCharacters"
+    android:hint="Enter Command eg - RFLFFLRF"
+    android:digits="RLF"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/et_x_position" />
+
+  <Button
+    android:id="@+id/btn_result"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="24dp"
+    android:text="Result"
+    android:onClick="executeCommand"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/et_commands" />
+
+  <TextView
+    android:id="@+id/tv_result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=""
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
